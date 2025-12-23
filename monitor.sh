@@ -8,7 +8,7 @@ inotifywait -m -r -e create --format '%w%f' ./uploaded | while read -r file; do
         # Nothing to do
     else
         FILE_EXTENSION="${file##*.}"
-        echo "New file detected: '$file' (File extention: $FILE_EXTENSION)"
+        echo "New file detected: '$file' (File extension: $FILE_EXTENSION)"
 
         # Check for completed write
         SIZE_BEFORE=`stat -c %s "$file"`
@@ -16,7 +16,7 @@ inotifywait -m -r -e create --format '%w%f' ./uploaded | while read -r file; do
             sleep 1
             SIZE_NOW=`stat -c %s "$file"`            
             if [[ $SIZE_NOW -ne $SIZE_BEFORE ]]; then
-                echo "File still growing ($SIZE_NOW -> $SIZE_NOW bytes)"
+                echo "File still growing ($SIZE_BEFORE -> $SIZE_NOW bytes)"
                 SIZE_BEFORE=$SIZE_NOW
                 continue
             fi
