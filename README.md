@@ -5,7 +5,7 @@ Once it detects that a new file got created (dropped into the folder), it checks
 If so, it renames it based on the Date/Time in the EXIF data.
 Afterwards it compresses it to save space and moves it into a new folder.
 
-I use this tool to process images automatically uploaded by my camera. They usually are named `IMG_20240503_105434.jpeg` or `P1610951.JPG` and not compresed at all.
+I use this tool to process images automatically uploaded by my camera. They usually are named `IMG_20240503_105434.jpeg` or `P1610951.JPG` and not compressed at all.
 
 Files which are not detected as `JPEG` (eg. movies made by the camera) get directly moved to the new folder without further processing.
 
