@@ -1,4 +1,4 @@
-# Image Processor
+# Image Monitor
 
 This is a simple docker container which uses `inotifywait` to monitor a folder for new files.
 Once it detects that a new file got created (dropped into the folder), it checks if it is a `JPEG` image.
